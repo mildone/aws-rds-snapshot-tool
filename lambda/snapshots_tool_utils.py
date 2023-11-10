@@ -148,7 +148,7 @@ def get_shared_snapshots(pattern, response):
 
 def get_snapshot_identifier(snapshot):
 # Function that will return the RDS Snapshot identifier given an ARN
-    match = re.match('arn:aws:rds:.*:.*:snapshot:(.+)',
+    match = re.match('arn:aws-cn:rds:.*:.*:snapshot:(.+)',
                      snapshot['DBSnapshotArn'])
     return match.group(1)
 
