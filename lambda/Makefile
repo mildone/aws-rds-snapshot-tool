@@ -42,7 +42,7 @@ clean:
 
 ._%: %.zip
 	"$(AWSCMD)" $(AWSARGS) s3 cp "$<" "s3://$(S3DEST)" \
-		--grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+#		--grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 	cp "$<" "$@"
 
 # This rule is a BSD make style rule that says "to make foo.zip, call
